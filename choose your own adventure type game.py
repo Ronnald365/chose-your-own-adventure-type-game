@@ -29,7 +29,7 @@ if r == 'a':
         print("starting the game")
     while True:
         print("before you can start answer this question. What is sheldon coppers joke word?")
-        password = input("what is the word?:")
+        password = input("what is the word?: ")
         #it will work
         if password == "bazinga":
             time.sleep(6)
@@ -80,5 +80,6 @@ if r == 'a':
             time.sleep(1)
             print("congratulations plz check out my git hub I also have many other programms on repl.it")
             break
-print("well done player #"+str(a))
-#this will be on git hub
+            time.sleep(1)
+            print("well done player #"+str(a))
+            #this will be on git hub
