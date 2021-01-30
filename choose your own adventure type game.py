@@ -8,7 +8,7 @@ while True:
     if r == 'y':
             time.sleep(1)
             print("ok lets get started")
-            time.sleep(1)
+            time.sleep(6)
             break
     if r == 'n':
         time.sleep(1)
