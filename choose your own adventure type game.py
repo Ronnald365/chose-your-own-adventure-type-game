@@ -1,3 +1,4 @@
+# currently still in development
 import random
 import time
 a=random.randrange(1,1000000000000)
