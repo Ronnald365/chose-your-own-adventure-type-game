@@ -31,11 +31,9 @@ if r == 'a':
     while True:
         print("before you can start answer this question. What is sheldon coppers joke word?")
         password = input("what is the word?: ")
-        #it will work
         if password == "bazinga":
             time.sleep(6)
             print("correct")
-        #I believe in me
             break
         else:
             time.sleep(6)
