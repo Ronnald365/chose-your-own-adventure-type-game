@@ -1,4 +1,4 @@
-# currently still in development
+# currently still in development on a different device 
 import random
 import time
 a=random.randrange(1,1000000000000)
