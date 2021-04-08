@@ -1,6 +1,9 @@
-# still in development
 import random
 import time
+output_1="you wait and wait and suddenly summer hits and the bear wakes up and leaves the bridge"
+output_2="you wait and wait but realize it is winter and the bear won't wake up so you leave =("
+output_3="you wait and wait and die of hunger =("
+output=[output_1,output_2,output_3]
 a=random.randrange(1,1000000000000)
 while True:
     time.sleep(1)
@@ -55,8 +58,18 @@ if r == 'a':
             time.sleep(1)
             print("you try to sneak past the bear but step on a twig the bear awakes and you are dead :'(")
         elif r=='wait':
-            time.sleep(1)
-            print("you wait but realize it is winter and the bear would not wake up so it is pointless and you leave :'(")
+            a1=random.choices(output)
+            print(a1[0])
+            if a1[0]==output_1:
+                time.sleep(1)
+                print("you can proceed")
+                break
+            elif a1[0]==output_2:
+                time.sleep(1)
+                print("better luck next time")
+            elif a1[0]==output_3:
+                time.sleep(1)
+                print("you got this try again")
         elif r=='boo':
             time.sleep(1)
             print("the bear gets scared and you are ded:'(")
@@ -102,5 +115,5 @@ if r == 'a':
             time.sleep(1)
             print("you thake the fourth door and die :'(")
             time.sleep(1)
-            print("well done player #"+str(a))
-            #this will be on git hub
+print("well done player #"+str(a))
+#this will be on git hub
