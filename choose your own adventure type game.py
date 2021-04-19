@@ -1,6 +1,9 @@
-# currently still in development
 import random
 import time
+output_1="you wait and wait and suddenly summer hits and the bear wakes up and leaves the bridge"
+output_2="you wait and wait but realize it is winter and the bear won't wake up so you leave =("
+output_3="you wait and wait and die of hunger =("
+output=[output_1,output_2,output_3]
 a=random.randrange(1,1000000000000)
 while True:
     time.sleep(1)
@@ -29,11 +32,15 @@ if r == 'a':
         time.sleep(1)
         print("starting the game")
     while True:
-        print("before you can start answer this question. What is sheldon coppers joke word?")
+        print("before you can start answer this question. What is sheldon coppers joke word? if you do not know just write skip")
         password = input("what is the word?: ")
         if password == "bazinga":
             time.sleep(6)
             print("correct")
+            break
+        elif password =='skip':
+            time.sleep(1)
+            print("you skipped the question")
             break
         else:
             time.sleep(6)
@@ -41,44 +48,72 @@ if r == 'a':
     time.sleep(1)
     print("type based adventure game")
     while True:
-        print("you see a huge bear in front of a bridge you want to pass what do you say? hi or boo? type one")
+        print("you see a huge bear in front of a bridge you want to pass what do you do? hi or boo or sneak or wait? type one")
         r = input()
         if r == 'hi':
             time.sleep(1)
             print("the bear accepts your kindness and lets you pass")
             break
-        else:
-         if r == 'boo':
+        elif r=='sneak':
+            time.sleep(1)
+            print("you try to sneak past the bear but step on a twig the bear awakes and you are dead :'(")
+        elif r=='wait':
+            a1=random.choices(output)
+            print(a1[0])
+            if a1[0]==output_1:
+                time.sleep(1)
+                print("you can proceed")
+                break
+            elif a1[0]==output_2:
+                time.sleep(1)
+                print("better luck next time")
+            elif a1[0]==output_3:
+                time.sleep(1)
+                print("you got this try again")
+        elif r=='boo':
             time.sleep(1)
             print("the bear gets scared and you are ded:'(")
-    while True:
-        time.sleep(1)
-        print("you stand before two paths type left or right?")
-        r = input()
-        if r == 'left':
-            time.sleep(1)
-            print("you take the left path and survive")
-            break
         else:
-         if r == 'right':
             time.sleep(1)
-            print("you take the right path and die:'(")
+            print("error")
     while True:
         time.sleep(1)
-        print("you stand before two doors type 1 or 2")
+        print("you stand before four paths type west or east or north west or north east?")
+        r = input()
+        if r == 'west':
+            time.sleep(1)
+            print("you walk west and survive")
+            break
+        elif r == 'east':
+            time.sleep(1)
+            print("you east path and die:'(")
+        elif r=='north west':
+            time.sleep(1)
+            print("you go north west and die :'(")
+        elif r=='north east':
+            time.sleep(1)
+            print("you go north east and die :'(")
+    while True:
+        time.sleep(1)
+        print("you stand before four doors type 1 or 2 or 3 or 4")
         r = input()
         if r == '1':
             time.sleep(1)
             print("you take the first door and get killed by a spider :'(")
-        else:
-         if r == '2':
+        elif r == '2':
             time.sleep(1)
             print("you take the second door and land in you living room")
             time.sleep(1)
             print("you win :)")
-            time.sleep(1)
-            print("congratulations plz check out my git hub I also have many other programms on repl.it")
             break
             time.sleep(1)
-            print("well done player #"+str(a))
-            #this will be on git hub
+            print("congratulations plz check out my git hub I also have many other programms on repl.it")
+        elif r=='3':
+            time.sleep(1)
+            print("you take the third door and die :'(")
+        elif r=='4':
+            time.sleep(1)
+            print("you thake the fourth door and die :'(")
+            time.sleep(1)
+print("well done player #"+str(a))
+#this will be on git hub
